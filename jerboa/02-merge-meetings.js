@@ -27,10 +27,10 @@ let mergeRanges = (meetings) => {
   merged.push(sortedMeetings[0]);
 
   for (let i = 1; i < sortedMeetings.length; i++) { // start at the second item
-    if (sortedMeetings[i].startTime > merged[merged.length-1].endTime) { //if the first meeting is greater than the last meeting time
-      merged.push(sortedMeetings[i]); // push the last meeting in
+    if (sortedMeetings[i].startTime > merged[merged.length-1].endTime) { //if the first meeting startTime is greater than the last meeting endtime
+      merged.push(sortedMeetings[i]); // push the current meeting in
     } else { // otherwise it's less and you'll need to merge them
-      merged[merged.length-1].endTime = sortedMeetings[i].endTime; //take the last meeting and add in the new value
+      merged[merged.length-1].endTime = sortedMeetings[i].endTime; //take the last meeting's endTime and add in the current endTime
     }
   }
 
