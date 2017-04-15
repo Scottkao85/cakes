@@ -14,6 +14,6 @@ let reverseStrInPlace = (str) => {
   return strRev.join('');
 };
 
-var test = 'what'
+var test = 'what';
 
-reverseStrInPlace(test)
+reverseStrInPlace(test);
