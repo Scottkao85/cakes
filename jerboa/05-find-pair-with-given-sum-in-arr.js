@@ -23,6 +23,36 @@ let findPairSum = (arr, n) => {
   return permutations[n] || false;
 };
 
-let test = [-1,-100,1,2,3,4,5,123,4,1,2];
+// OTHER SOLUTION
+// o(n) had to sort first though
+// let findPairSum = (arr, n) => {
+//   let sortedArr = arr.sort( (a, b) => { return a - b; } );
+//   let behind = sortedArr.length - 1;
+//   let front = 0;
+//   let sum;
+//   let pair;
+//
+//   while (front !== behind) {
+//     pair = [sortedArr[front], sortedArr[behind]];
+//
+//     sum = pair[0] + pair[1];
+//
+//     if (sum > n) {
+//       behind = behind - 1;
+//     }
+//
+//     if (sum < n) {
+//       front = front + 1;
+//     }
+//
+//     if (sum === n) {
+//       return pair;
+//     }
+//   }
+//
+//   return false;
+// };
 
-findPairSum(test, 100);
+let test = [-1,-100,1,2,4];
+
+findPairSum(test, 6);
