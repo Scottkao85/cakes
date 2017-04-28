@@ -4,3 +4,5 @@ If an egg is dropped from above that floor, it will break. If it is dropped from
 
 Given two eggs, find the highest floor an egg can be dropped from without breaking, with as few drops as possible.
 */
+
+// https://brilliant.org/wiki/egg-dropping/
