@@ -22,3 +22,19 @@ let data = {
      }
    ]
  };
+
+let container = document.createElement('div');
+
+let deserializeJSON = (data, parent) => {
+
+  let tag = data['tag'];
+  let attrArray = data['attributes'];
+  let childrenArray = data['children'];
+
+  let element = document.createElement[tag];
+
+  for(let i = 0; i < attrArray.length; i++) {
+    element.setAttribute(attrArray[i]['name'], attrArray[i]['value']);
+  }
+
+}
