@@ -31,7 +31,7 @@ const deserializeJSON = (data, parent) => {
   let attrArray = data['attributes'];
   let childrenArray = data['children'];
 
-  let element = document.createElement[tag];
+  let element = document.createElement(tag);
 
   for(let i = 0; i < attrArray.length; i++) {
     element.setAttribute(attrArray[i]['name'], attrArray[i]['value']);
@@ -41,7 +41,8 @@ const deserializeJSON = (data, parent) => {
     parent.appendChild(element);
   }else {
     container.appendChild(element);
-
+  }
+  
   for(let j = 0; j < childrenArray.length; j++) {
     if(typeof childrenArray[j] === String) {
       elment.innerText = childrenArray[j];
