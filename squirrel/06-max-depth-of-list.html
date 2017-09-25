@@ -40,6 +40,35 @@
     <script type="text/javascript">
     // find the max depth of nested ul/ol tags
     // write a function called checkDepth that returns the max depth of nested ul/ol lists
+
+    const list = document.querySelector('.domTree');
+
+    const checkNodeDepth = (node) => {
+      let depth = 0;
+
+      if(node.children) {
+        let children = node.children;
+
+
+        for(let i = 0; i < children.length; i++) {
+          let temp = checkNodeDepth(children[i]);
+
+          if(temp > depth) {
+            depth = temp;
+          }
+        }
+      }
+
+      depth = depth + 1;
+
+      return depth;
+
+
+
+    }
+
+
+
     </script>
 
   </body>
